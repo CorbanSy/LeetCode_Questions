@@ -4,7 +4,7 @@ class ListNode:
         self.next = next
 
 class Solution:
-    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    def removeNthFromEnd(self, head: [ListNode], n: int) -> [ListNode]:
          # Initialize a dummy node to handle edge cases such as removing the head
         dummy = ListNode(0, head)
         fast = slow = dummy
