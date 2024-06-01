@@ -1,0 +1,20 @@
+class Solution:
+    def longestCommonPrefix(self, strs: list[str]) -> str:
+         # Edge case: if the list is empty, return an empty string
+        if not strs:
+            return ""
+        
+        # Initialize the prefix as the first string
+        prefix = strs[0]
+        
+        # Iterate through the remaining strings
+        for string in strs[1:]:
+            # Update the prefix to match the current string
+            while string[:len(prefix)] != prefix:
+                # Reduce the prefix by removing the last character
+                prefix = prefix[:-1]
+                # If the prefix becomes empty, return an empty string
+                if not prefix:
+                    return ""
+        
+        return prefix
